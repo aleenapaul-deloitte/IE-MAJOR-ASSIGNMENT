@@ -1,0 +1,81 @@
+#%RAML 1.0
+title: Major-Assignment-Aleena Paul
+mediaType:
+  - application/json
+version: v1
+protocols:
+  - HTTP
+/milestone1:
+  get:
+    responses:
+      "200":
+        body:
+          type: Aleena-Paul
+  head:
+    responses:
+      "200":
+        body:
+          type: object
+/milestone3:
+  get:
+    responses:
+      "200":
+        body:
+          type: GETMETHOD
+/milestone2:
+  post:
+    body:
+      application/json:
+        type: postRequestMethod
+    responses:
+      "200":
+        body:
+          type: postresponsemethod
+types:
+  GetResponseMethod:
+    properties:
+      id:
+        example: "2482"
+        type: string
+      name:
+        example: Kartik Kocchar
+        type: string
+      email:
+        example: kartik_kocchar@rutherford.io
+        type: string
+      gender:
+        example: female
+        type: string
+      status:
+        example: inactive
+        type: string
+  postRequestMethod:
+    properties:
+      Userdetails:
+        items:
+          properties:
+            post_id:
+              example: "2003"
+              type: string
+            id:
+              example: "1978"
+              type: string
+            name:
+              example: Bhaaswar Pothuvaal II
+              type: string
+  postresponsemethod:
+    properties:
+      post_id:
+        example: "2003"
+        type: string
+  GETMETHOD:
+    properties:
+      Name:
+        example: Gorakhanatha Chaturvedi
+        type: string
+      Status:
+        example: active
+        type: string
+      Gender:
+        example: female
+        type: string

@@ -1,0 +1,41 @@
+#%RAML 1.0
+types:
+  Aleena-Paul:
+    items:
+      items:
+        example: Example
+        type: string
+  Milestone2-Aleena-Paul:
+    properties:
+      Userdetails:
+        items:
+          properties:
+            post_id:
+              example: "2003"
+              type: string
+            id:
+              example: "1978"
+              type: string
+            name:
+              example: Bhaaswar Pothuvaal II
+              type: string
+title: Major-Assignment-Aleena Paul
+mediaType:
+  - application/json
+version: v1
+protocols:
+  - HTTP
+/milestone1:
+  get:
+    responses:
+      "200":
+        body:
+          type: object
+/milestone3:
+  get:
+    responses:
+      "200": {}
+/milestone2:
+  post:
+    responses:
+      "200": {}
